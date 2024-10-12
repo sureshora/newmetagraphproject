@@ -1,0 +1,12 @@
+ecosphere/
+│
+├── app.py                # Flask backend
+├── static/
+│   ├── js/
+│   │   └── main.js       # JavaScript to handle API requests and chart rendering
+│   └── css/
+│       └── styles.css    # Optional: CSS styles
+├── templates/
+│   └── index.html        # Main HTML file
+├── requirements.txt       # Python dependencies
+└── .env                   # Environment variables (API keys)

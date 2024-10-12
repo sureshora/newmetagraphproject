@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOSPHERE: Real-Time Environmental Intelligence</title>
+    <link rel="stylesheet" href="/project5/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Welcome to ECOSPHERE</h1>
+
+    <!-- Form to select country and city -->
+    <form id="dataForm">
+        <label for="country">Select Country:</label>
+        <select id="country" name="country">
+            <option value="US">United States</option>
+            <option value="IN">India</option>
+            <option value="UK">United Kingdom</option>
+            <option value="CA">Canada</option>
+            <option value="AU">Australia</option>
+            <option value="DE">Germany</option>
+            <option value="JP">Japan</option>
+            <option value="BR">Brazil</option>
+        </select>
+
+        <label for="city">Select City:</label>
+        <select id="city" name="city">
+            <option value="">Select a country first</option>
+        </select>
+
+        <button type="button" onclick="fetchData()">Fetch Data</button>
+    </form>
+
+
+    <!-- Display the fetched data in tables -->
+    <div>
+        <h2>Weather and Air Quality Data</h2>
+        <table border="1">
+            <tr>
+                <th>City</th>
+                <th>Temperature (°C)</th>
+                <th>Humidity (%)</th>
+                <th>PM2.5 (μg/m³)</th>
+                <th>CO2 (ppm)</th>
+            </tr>
+            <tr>
+                <td id="cityTable"></td>
+                <td id="tempTable"></td>
+                <td id="humidityTable"></td>
+                <td id="pm25Table"></td>
+                <td id="co2Table"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Add the canvas element for the Chart.js graph -->
+    <div>
+        <h2>Graphical Representation</h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="/project5/static/js/main.js"></script>
+</body>
+</html>
